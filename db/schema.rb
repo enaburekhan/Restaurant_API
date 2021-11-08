@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_11_08_183441) do
     t.datetime "opening_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "favorite_restaurant_id", null: false
+    t.bigint "favorite_restaurant_id"
     t.index ["favorite_restaurant_id"], name: "index_restaurants_on_favorite_restaurant_id"
   end
 
