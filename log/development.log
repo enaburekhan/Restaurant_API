@@ -16051,3 +16051,190 @@ Processing by RestaurantsController#index as */*
 Completed 200 OK in 274ms (Views: 260.9ms | ActiveRecord: 8.4ms | Allocations: 210123)
 
 
+Started POST "/api/v1/users" for ::1 at 2021-11-09 16:48:59 +0100
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"test_user", "email"=>"testuser@gmail.com", "password"=>"[FILTERED]", "user"=>{"username"=>"test_user", "email"=>"testuser@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test_user"], ["email", "testuser@gmail.com"], ["password_digest", "$2a$12$cj10HEaDV6GbR0mRk/uQQ.sOuyhZy1jvuDGfBtqX.9mQz1H3progm"], ["created_at", "2021-11-09 15:48:59.681231"], ["updated_at", "2021-11-09 15:48:59.681231"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 320ms (Views: 0.3ms | ActiveRecord: 12.8ms | Allocations: 5347)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-09 16:49:16 +0100
+Processing by AuthenticationsController#create as */*
+  Parameters: {"username"=>"test_user", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_user"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 305ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1348)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-09 16:49:22 +0100
+Processing by AuthenticationsController#create as */*
+  Parameters: {"username"=>"test_user", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_user"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 406 Not Acceptable in 309ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 548)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-09 16:49:30 +0100
+Processing by AuthenticationsController#create as */*
+  Parameters: {"username"=>"test_user", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_user"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 308ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 629)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 16:56:45 +0100
+  
+ActionDispatch::Http::MimeNegotiation::InvalidType ("eyjhbgcioijiuzi1nij9.eyj1c2vyx2lkijoxfq.9vmx0omaa_vg4lg9g2xtj-l_sjyegljin8sixczbkw8" is not a valid MIME type):
+  
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 16:58:27 +0100
+  
+ActionDispatch::Http::MimeNegotiation::InvalidType ("eyjhbgcioijiuzi1nij9.eyj1c2vyx2lkijoxfq.9vmx0omaa_vg4lg9g2xtj-l_sjyegljin8sixczbkw8" is not a valid MIME type):
+  
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 17:02:17 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CollectionsController#create as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 4.3ms | Allocations: 304)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-09 17:02:57 +0100
+Processing by AuthenticationsController#create as */*
+  Parameters: {"username"=>"test_user", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_user"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 343ms (Views: 0.3ms | ActiveRecord: 5.6ms | Allocations: 7429)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 17:03:27 +0100
+Processing by CollectionsController#create as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 104)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 17:05:22 +0100
+Processing by CollectionsController#create as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 104)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 17:08:02 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CollectionsController#create as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 2.6ms | Allocations: 304)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test_user"], ["email", "eric@gmail.com"], ["password_digest", "$2a$12$.QBuWsPGXzCqQ3Fys00vTui6mn9x/YlZ2l9XMUIRZNhESG/sL5Foe"], ["created_at", "2021-11-09 17:18:14.475009"], ["updated_at", "2021-11-09 17:18:14.475009"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test_user"], ["email", "testuser@gmail.com"], ["password_digest", "$2a$12$t6UT8mYiDvIcauWwAka/wejDBbIl6CSeQ667OBzDd7BJD/BJYUwua"], ["created_at", "2021-11-09 17:25:41.755497"], ["updated_at", "2021-11-09 17:25:41.755497"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 18:25:55 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CollectionsController#create as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 3.2ms | Allocations: 304)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 18:27:31 +0100
+Processing by CollectionsController#create as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.3ms | Allocations: 2599)
+
+
+  
+NoMethodError (undefined method `collections' for nil:NilClass):
+  
+app/controllers/collections_controller.rb:16:in `create'
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 18:28:42 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CollectionsController#create as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 1.8ms | Allocations: 304)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 18:29:33 +0100
+Processing by CollectionsController#create as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 104)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 18:31:52 +0100
+Processing by CollectionsController#create as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 104)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-11-09 18:42:50 +0100
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"test_user", "email"=>"testuser@gmail.com", "password"=>"[FILTERED]", "user"=>{"username"=>"test_user", "email"=>"testuser@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test_user"], ["email", "testuser@gmail.com"], ["password_digest", "$2a$12$1Ku1RKN.JcP9Lbi1UHgZcunEU4YLsqxv2SfBhqG8CkRbhYIxjdLim"], ["created_at", "2021-11-09 17:42:50.991849"], ["updated_at", "2021-11-09 17:42:50.991849"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 342ms (Views: 0.4ms | ActiveRecord: 15.7ms | Allocations: 7550)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 18:43:33 +0100
+Processing by CollectionsController#create as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 104)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-09 18:43:47 +0100
+Processing by CollectionsController#create as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :collection[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mCollection Create (1.6ms)[0m  [1m[32mINSERT INTO "collections" ("vegetarian_favorites", "meat_lovers", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vegetarian_favorites", "Kushi Tsuru"], ["meat_lovers", "The Stinking Rose"], ["user_id", 4], ["created_at", "2021-11-09 17:43:47.865362"], ["updated_at", "2021-11-09 17:43:47.865362"]]
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+Completed 201 Created in 51ms (Views: 0.6ms | ActiveRecord: 9.9ms | Allocations: 10315)
+
+
+Started PATCH "/api/v1/collections" for ::1 at 2021-11-09 18:45:22 +0100
+  
+ActionController::RoutingError (No route matches [PATCH] "/api/v1/collections"):
+  
+Started PUT "/api/v1/collections" for ::1 at 2021-11-09 18:45:37 +0100
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/collections"):
+  
+Started GET "/api/v1/collections" for ::1 at 2021-11-09 18:45:58 +0100
+Processing by CollectionsController#index as */*
+  Parameters: {"vegetarian_favorites"=>"Kushi Tsuru777", "meat_lovers"=>"The Stinking Rose", "user_id"=>1, "collection"=>{"vegetarian_favorites"=>"Kushi Tsuru777", "meat_lovers"=>"The Stinking Rose", "user_id"=>1}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 0.7ms | Allocations: 2303)
+
+
