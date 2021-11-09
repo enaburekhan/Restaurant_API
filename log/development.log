@@ -16044,3 +16044,10 @@ Processing by RestaurantsController#index as */*
 Completed 200 OK in 383ms (Views: 382.4ms | ActiveRecord: 7.5ms | Allocations: 210347)
 
 
+Started GET "/api/v1/restaurants" for 127.0.0.1 at 2021-11-09 16:23:02 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 274ms (Views: 260.9ms | ActiveRecord: 8.4ms | Allocations: 210123)
+
+
