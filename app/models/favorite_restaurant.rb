@@ -1,4 +1,4 @@
 class FavoriteRestaurant < ApplicationRecord
-  has_many :collections
-  has_many :restaurants
+  belongs_to :collection
+  belongs_to :restaurant
 end
