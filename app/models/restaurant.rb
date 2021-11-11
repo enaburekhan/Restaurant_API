@@ -13,7 +13,6 @@ class Restaurant < ApplicationRecord
   def self.csv_import
     new_empty_aaray = []
     CSV.foreach('lib/tasks/glints.csv', encoding: 'ISO-8859-1', liberal_parsing: true) do |row|
-      #   puts row[1]
       new_empty_aaray << Restaurant.create!(name: row[0], opening_date: row[1])
     end
     Restaurant.import(new_empty_aaray)

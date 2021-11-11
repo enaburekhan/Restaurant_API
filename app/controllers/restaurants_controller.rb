@@ -5,10 +5,6 @@ class RestaurantsController < ApplicationController
     render json: @restaurants
   end
 
-  def import
-    Restaurant.csv_import
-  end
-
   def show
     render json: @restaurant
   end

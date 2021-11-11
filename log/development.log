@@ -16238,3 +16238,2056 @@ Processing by CollectionsController#index as */*
 Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 0.7ms | Allocations: 2303)
 
 
+Started GET "/static/js/vendors~main.chunk.js" for ::1 at 2021-11-09 22:35:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/vendors~main.chunk.js"):
+  
+Started GET "/static/js/bundle.js" for ::1 at 2021-11-09 22:35:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/bundle.js"):
+  
+Started GET "/static/js/main.chunk.js" for ::1 at 2021-11-09 22:35:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/main.chunk.js"):
+  
+Started GET "/manifest.json" for ::1 at 2021-11-09 22:35:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/manifest.json"):
+  
+Started GET "/" for ::1 at 2021-11-09 22:49:49 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/eric/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/eric/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.2ms | Allocations: 355)
+Completed 200 OK in 19ms (Views: 12.6ms | Allocations: 2723)
+
+
+Started GET "/" for ::1 at 2021-11-10 10:00:49 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/eric/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/eric/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 30.5ms | Allocations: 181)
+Completed 200 OK in 34ms (Views: 33.0ms | Allocations: 827)
+
+
+Started GET "/" for ::1 at 2021-11-10 14:52:14 +0100
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/eric/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/eric/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.5ms | Allocations: 356)
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 2798)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-11-10 14:52:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/api/v1/users" for ::1 at 2021-11-10 16:18:52 +0100
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"ericenaburekhan", "email"=>"ericenaburekhan2018@gmail.com", "password"=>"[FILTERED]", "user"=>{"username"=>"ericenaburekhan", "email"=>"ericenaburekhan2018@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "ericenaburekhan"], ["email", "ericenaburekhan2018@gmail.com"], ["password_digest", "$2a$12$cuk1BuOYfqCChoO1upvgY.XSXcYSY.NtdfOjAbyBWpF5DkKlfG58i"], ["created_at", "2021-11-10 15:18:52.516678"], ["updated_at", "2021-11-10 15:18:52.516678"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 326ms (Views: 0.4ms | ActiveRecord: 15.0ms | Allocations: 5671)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-10 16:23:39 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"ericenaburekhan", "email"=>"ericenaburekhan2018@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ericenaburekhan", "email"=>"ericenaburekhan2018@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ericenaburekhan"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 406 Not Acceptable in 321ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1311)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-10 16:23:56 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"ericenaburekhan", "email"=>"ericenaburekhan2018@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ericenaburekhan", "email"=>"ericenaburekhan2018@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ericenaburekhan"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 316ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 632)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-10 16:24:11 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"ericenaburekhan", "email"=>"ericenaburekhan2018@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ericenaburekhan", "email"=>"ericenaburekhan2018@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ericenaburekhan"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 313ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 641)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-10 16:24:41 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"ericenaburekhan", "email"=>"ericenaburekhan2018@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ericenaburekhan", "email"=>"ericenaburekhan2018@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ericenaburekhan"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 322ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 628)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-11-10 16:25:42 +0100
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"kelvin", "email"=>"kelvin@gmail.com", "password"=>"[FILTERED]", "user"=>{"username"=>"kelvin", "email"=>"kelvin@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "kelvin"], ["email", "kelvin@gmail.com"], ["password_digest", "$2a$12$LILaghLIMtg2Npcr.OATpuarBR7/m1MhlHwRxHJWUjeBlm54YPn.S"], ["created_at", "2021-11-10 15:25:42.750868"], ["updated_at", "2021-11-10 15:25:42.750868"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 321ms (Views: 0.2ms | ActiveRecord: 6.8ms | Allocations: 2044)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-10 16:27:07 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"kelvin", "email"=>"kelvin@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"username"=>"kelvin", "email"=>"kelvin@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kelvin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 317ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 644)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-11-10 16:31:51 +0100
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"test_user", "email"=>"testuser@gmail.com", "password"=>"[FILTERED]", "user"=>{"username"=>"test_user", "email"=>"testuser@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "test_user"], ["email", "testuser@gmail.com"], ["password_digest", "$2a$12$ahZhlMXocvWsW0SY88kRouIMbKwdfcubuAQeiIEOho4QAztzBFn6."], ["created_at", "2021-11-10 15:31:51.483999"], ["updated_at", "2021-11-10 15:31:51.483999"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 310ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 2044)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-10 16:32:08 +0100
+Processing by AuthenticationsController#create as */*
+  Parameters: {"username"=>"test_user", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_user"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 306ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 629)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 18:58:42 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (7.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 526ms (Views: 488.3ms | ActiveRecord: 22.5ms | Allocations: 219835)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 18:59:43 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 309ms (Views: 304.0ms | ActiveRecord: 4.7ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 19:21:15 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 375ms (Views: 374.2ms | ActiveRecord: 14.1ms | Allocations: 208071)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 19:30:48 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 539ms (Views: 538.8ms | ActiveRecord: 11.7ms | Allocations: 208052)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 19:34:25 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 360ms (Views: 355.4ms | ActiveRecord: 4.1ms | Allocations: 206100)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-10 19:39:13 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"kelvin", "password"=>"[FILTERED]", "authentication"=>{"username"=>"kelvin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kelvin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 325ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 657)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 19:39:14 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (5.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 344ms (Views: 338.2ms | ActiveRecord: 5.7ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 19:39:25 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (7.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 315ms (Views: 306.6ms | ActiveRecord: 7.7ms | Allocations: 206100)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-11-10 19:40:34 +0100
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"mariam", "email"=>"mariam@gmail.com", "password"=>"[FILTERED]", "user"=>{"username"=>"mariam", "email"=>"mariam@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "mariam"], ["email", "mariam@gmail.com"], ["password_digest", "$2a$12$WdFcG8PW4R315yvU9zGui.6mKO.iKbe0nZ2V..rFxxvjVQNE5zsk2"], ["created_at", "2021-11-10 18:40:34.886552"], ["updated_at", "2021-11-10 18:40:34.886552"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 323ms (Views: 0.3ms | ActiveRecord: 7.0ms | Allocations: 2047)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 19:40:35 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 385ms (Views: 380.3ms | ActiveRecord: 4.4ms | Allocations: 206100)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-10 19:41:15 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"mariam", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mariam", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mariam"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 406 Not Acceptable in 330ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 545)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-10 19:45:01 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"ericenaburekhan", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ericenaburekhan", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ericenaburekhan"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 406 Not Acceptable in 349ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 544)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-10 19:45:21 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"mariam", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mariam", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mariam"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 335ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 628)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 19:45:22 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (2.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 367ms (Views: 363.4ms | ActiveRecord: 2.7ms | Allocations: 206100)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-10 20:39:54 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"kelvin", "password"=>"[FILTERED]", "authentication"=>{"username"=>"kelvin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kelvin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 356ms (Views: 0.2ms | ActiveRecord: 6.1ms | Allocations: 2627)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 20:39:55 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 513ms (Views: 507.9ms | ActiveRecord: 4.2ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 21:36:56 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 385ms (Views: 384.6ms | ActiveRecord: 9.3ms | Allocations: 208053)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 21:38:42 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 404ms (Views: 399.9ms | ActiveRecord: 3.7ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 21:41:14 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 367ms (Views: 363.6ms | ActiveRecord: 3.1ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 21:41:19 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 422ms (Views: 417.4ms | ActiveRecord: 4.1ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 22:25:51 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (5.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 616ms (Views: 616.0ms | ActiveRecord: 9.3ms | Allocations: 208071)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 22:25:52 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 329ms (Views: 325.1ms | ActiveRecord: 3.1ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 22:37:06 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 442ms (Views: 441.7ms | ActiveRecord: 11.0ms | Allocations: 208072)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 22:38:12 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 412ms (Views: 407.4ms | ActiveRecord: 4.2ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 22:39:49 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 381ms (Views: 376.9ms | ActiveRecord: 4.0ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 22:45:34 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 541ms (Views: 540.8ms | ActiveRecord: 10.6ms | Allocations: 208072)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:06:28 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 396ms (Views: 395.7ms | ActiveRecord: 10.7ms | Allocations: 208052)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:06:29 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 375ms (Views: 370.4ms | ActiveRecord: 4.0ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:06:30 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (5.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 383ms (Views: 376.8ms | ActiveRecord: 5.8ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:06:31 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (6.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 400ms (Views: 392.4ms | ActiveRecord: 6.9ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:07:08 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 402ms (Views: 397.7ms | ActiveRecord: 3.3ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:08:40 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 324ms (Views: 319.6ms | ActiveRecord: 4.0ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:10:22 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (11.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 444ms (Views: 432.1ms | ActiveRecord: 11.1ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:13:15 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (5.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 435ms (Views: 429.4ms | ActiveRecord: 5.0ms | Allocations: 206104)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:13:17 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 628ms (Views: 622.7ms | ActiveRecord: 4.8ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:18:31 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (5.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 360ms (Views: 360.1ms | ActiveRecord: 9.3ms | Allocations: 208072)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:19:29 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 328ms (Views: 324.3ms | ActiveRecord: 3.6ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:20:53 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (7.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 562ms (Views: 554.7ms | ActiveRecord: 7.1ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:24:11 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 363ms (Views: 358.0ms | ActiveRecord: 4.7ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:27:59 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (6.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 404ms (Views: 397.7ms | ActiveRecord: 6.3ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:28:00 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (2.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 386ms (Views: 383.5ms | ActiveRecord: 2.4ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:28:01 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (5.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 437ms (Views: 431.5ms | ActiveRecord: 5.3ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:30:58 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (6.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 424ms (Views: 417.8ms | ActiveRecord: 6.2ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:44:10 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (6.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 390ms (Views: 390.0ms | ActiveRecord: 12.2ms | Allocations: 208074)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:44:38 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 429ms (Views: 423.8ms | ActiveRecord: 4.7ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-10 23:47:30 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 668ms (Views: 663.6ms | ActiveRecord: 4.0ms | Allocations: 206103)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 08:14:05 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (5.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 424ms (Views: 423.7ms | ActiveRecord: 12.8ms | Allocations: 208071)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 10:04:23 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 365ms (Views: 364.9ms | ActiveRecord: 8.6ms | Allocations: 208033)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 10:42:20 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 437ms (Views: 436.6ms | ActiveRecord: 11.4ms | Allocations: 208033)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 10:42:20 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 361ms (Views: 356.5ms | ActiveRecord: 3.5ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 10:42:21 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 321ms (Views: 316.6ms | ActiveRecord: 4.2ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 10:47:22 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (2.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 424ms (Views: 421.3ms | ActiveRecord: 2.7ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 10:53:18 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 532ms (Views: 531.5ms | ActiveRecord: 10.6ms | Allocations: 208072)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 10:53:20 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (7.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 313ms (Views: 305.3ms | ActiveRecord: 7.7ms | Allocations: 206101)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-11 11:10:52 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"kelvin", "password"=>"[FILTERED]", "authentication"=>{"username"=>"kelvin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kelvin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 356ms (Views: 0.3ms | ActiveRecord: 6.6ms | Allocations: 2629)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 11:10:53 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (5.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 390ms (Views: 383.8ms | ActiveRecord: 5.4ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 11:11:36 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 388ms (Views: 383.3ms | ActiveRecord: 3.8ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 12:47:41 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 303ms (Views: 302.4ms | ActiveRecord: 7.5ms | Allocations: 208052)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-11 12:49:22 +0100
+Processing by CollectionsController#create as JSON
+  Parameters: {"vegetarian_favorites"=>"The Purple pig", "meat_lovers"=>"Bite Me Sandwiches", "user_id"=>"2862", "collection"=>{"vegetarian_favorites"=>"The Purple pig", "meat_lovers"=>"Bite Me Sandwiches", "user_id"=>"2862"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :collection[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mCollection Create (5.0ms)[0m  [1m[32mINSERT INTO "collections" ("vegetarian_favorites", "meat_lovers", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vegetarian_favorites", "The Purple pig"], ["meat_lovers", "Bite Me Sandwiches"], ["user_id", 6], ["created_at", "2021-11-11 11:49:22.494497"], ["updated_at", "2021-11-11 11:49:22.494497"]]
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+Completed 201 Created in 49ms (Views: 0.9ms | ActiveRecord: 20.8ms | Allocations: 7713)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 12:49:58 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 346ms (Views: 341.2ms | ActiveRecord: 4.3ms | Allocations: 206102)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-11 13:13:51 +0100
+Processing by CollectionsController#create as JSON
+  Parameters: {"vegetarian_favorites"=>"The innMon", "meat_lovers"=>"fish eater", "user_id"=>"", "collection"=>{"vegetarian_favorites"=>"The innMon", "meat_lovers"=>"fish eater", "user_id"=>""}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :collection[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mCollection Create (2.6ms)[0m  [1m[32mINSERT INTO "collections" ("vegetarian_favorites", "meat_lovers", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vegetarian_favorites", "The innMon"], ["meat_lovers", "fish eater"], ["user_id", 6], ["created_at", "2021-11-11 12:13:51.757573"], ["updated_at", "2021-11-11 12:13:51.757573"]]
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+Completed 201 Created in 37ms (Views: 0.5ms | ActiveRecord: 12.9ms | Allocations: 5399)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:13:51 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 1.1ms | Allocations: 2392)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-11 13:15:30 +0100
+Processing by CollectionsController#create as JSON
+  Parameters: {"vegetarian_favorites"=>"mr big vegatables", "meat_lovers"=>"goat meat joint", "user_id"=>"", "collection"=>{"vegetarian_favorites"=>"mr big vegatables", "meat_lovers"=>"goat meat joint", "user_id"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :collection[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mCollection Create (0.5ms)[0m  [1m[32mINSERT INTO "collections" ("vegetarian_favorites", "meat_lovers", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vegetarian_favorites", "mr big vegatables"], ["meat_lovers", "goat meat joint"], ["user_id", 6], ["created_at", "2021-11-11 12:15:30.966020"], ["updated_at", "2021-11-11 12:15:30.966020"]]
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+Completed 201 Created in 15ms (Views: 0.5ms | ActiveRecord: 2.6ms | Allocations: 3390)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:15:31 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 4.0ms | ActiveRecord: 1.4ms | Allocations: 2262)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 13:17:15 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 402ms (Views: 398.1ms | ActiveRecord: 3.7ms | Allocations: 206100)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:17:53 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 2.0ms | Allocations: 2264)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:21:08 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (3.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 4.1ms | ActiveRecord: 3.5ms | Allocations: 2264)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-11 13:21:53 +0100
+Processing by CollectionsController#create as JSON
+  Parameters: {"vegetarian_favorites"=>"sacha veg", "meat_lovers"=>"bush meat point", "user_id"=>"", "collection"=>{"vegetarian_favorites"=>"sacha veg", "meat_lovers"=>"bush meat point", "user_id"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :collection[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mCollection Create (0.5ms)[0m  [1m[32mINSERT INTO "collections" ("vegetarian_favorites", "meat_lovers", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vegetarian_favorites", "sacha veg"], ["meat_lovers", "bush meat point"], ["user_id", 6], ["created_at", "2021-11-11 12:21:53.610076"], ["updated_at", "2021-11-11 12:21:53.610076"]]
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+Completed 201 Created in 17ms (Views: 0.5ms | ActiveRecord: 6.2ms | Allocations: 3391)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:21:53 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 2362)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:48:14 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 3.8ms | ActiveRecord: 8.0ms | Allocations: 4345)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:48:44 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 9ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 2065)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:48:44 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 5.2ms | ActiveRecord: 1.5ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:48:46 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:48:46 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 3.6ms | ActiveRecord: 1.3ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:48:47 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 7ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:48:47 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (3.0ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 3.2ms | ActiveRecord: 3.4ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:48:47 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 10ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:48:48 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:48:48 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 9ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:48:48 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 0.9ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:48:53 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:48:53 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 4.9ms | ActiveRecord: 1.6ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:48:58 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 10ms (Views: 0.3ms | ActiveRecord: 3.6ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:48:58 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (3.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 3.5ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:48:59 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 9ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:48:59 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 5.1ms | ActiveRecord: 0.8ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:48:59 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.8ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 11ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:48:59 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 1.9ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:48:59 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 14ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:00 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (2.8ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 3.1ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:01 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 12ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:01 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 0.9ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:02 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 14ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:02 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 4.5ms | ActiveRecord: 1.5ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:02 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 8ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:02 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 0.6ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:02 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 11ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:02 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.7ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 1.2ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:02 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 10ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:02 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:06 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 7ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:06 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:07 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 10ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:07 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (2.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 4.9ms | ActiveRecord: 3.3ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:07 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 11ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:07 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.7ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 66ms (Views: 38.7ms | ActiveRecord: 1.0ms | Allocations: 2363)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:07 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 52ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 2004)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:07 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 4.2ms | ActiveRecord: 1.0ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:07 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 8ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:07 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (2.8ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 4.4ms | ActiveRecord: 3.1ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:11 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 10ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:11 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 0.8ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:11 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 12ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 2004)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:11 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 1.6ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:12 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.7ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 9ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:12 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 0.6ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:49:12 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 9ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:49:12 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 1.3ms | Allocations: 2362)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:51:05 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (2.9ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 3.2ms | ActiveRecord: 3.2ms | Allocations: 2362)
+
+
+Started DELETE "/api/v1/collections/undefined" for ::1 at 2021-11-11 13:51:14 +0100
+Processing by CollectionsController#destroy as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1 AND "collections"."id" = $2 LIMIT $3[0m  [["user_id", 6], ["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/collections_controller.rb:41:in `find_collection'
+Filter chain halted as :find_collection rendered or redirected
+Completed 404 Not Found in 10ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 2003)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:51:14 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 2362)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:57:23 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 4.9ms | ActiveRecord: 7.8ms | Allocations: 4345)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:57:24 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 1.4ms | Allocations: 2362)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 13:57:24 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 7.1ms | ActiveRecord: 0.7ms | Allocations: 2362)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 14:26:30 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 6.8ms | ActiveRecord: 7.5ms | Allocations: 4326)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 14:26:39 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 2362)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-11 14:27:27 +0100
+Processing by CollectionsController#create as JSON
+  Parameters: {"vegetarian_favorites"=>"spice beans ap", "meat_lovers"=>"red meat point", "user_id"=>"", "collection"=>{"vegetarian_favorites"=>"spice beans ap", "meat_lovers"=>"red meat point", "user_id"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :collection[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mCollection Create (1.1ms)[0m  [1m[32mINSERT INTO "collections" ("vegetarian_favorites", "meat_lovers", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vegetarian_favorites", "spice beans ap"], ["meat_lovers", "red meat point"], ["user_id", 6], ["created_at", "2021-11-11 13:27:27.400397"], ["updated_at", "2021-11-11 13:27:27.400397"]]
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+Completed 201 Created in 18ms (Views: 0.5ms | ActiveRecord: 7.2ms | Allocations: 3392)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 14:27:27 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 1.3ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 14:35:30 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 3.9ms | ActiveRecord: 6.0ms | Allocations: 4425)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-11 14:35:40 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"ericenaburekhan", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ericenaburekhan", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ericenaburekhan"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 406 Not Acceptable in 336ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 549)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-11-11 14:35:55 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"kelvin", "password"=>"[FILTERED]", "authentication"=>{"username"=>"kelvin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kelvin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 327ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 627)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 14:35:56 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 428ms (Views: 423.8ms | ActiveRecord: 4.3ms | Allocations: 206100)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 14:37:20 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 0.9ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 14:37:27 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 5.1ms | ActiveRecord: 1.5ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 14:42:35 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 14:42:46 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (4.8ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 3.6ms | ActiveRecord: 5.7ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 14:44:08 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 6.8ms | ActiveRecord: 0.9ms | Allocations: 2461)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 14:47:06 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+    
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 249ms (Views: 245.4ms | ActiveRecord: 3.1ms | Allocations: 206108)
+
+
+Started GET "/api/v1/restaurants/3" for ::1 at 2021-11-11 14:47:25 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+    
+Processing by RestaurantsController#show as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 129)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (809: unexpected token at ''):
+  
+app/controllers/restaurants_controller.rb:19:in `find_restaurant'
+Started GET "/api/v1/restaurants/6" for ::1 at 2021-11-11 14:48:30 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+    
+Processing by RestaurantsController#show as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 109)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (809: unexpected token at ''):
+  
+app/controllers/restaurants_controller.rb:19:in `find_restaurant'
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 14:48:40 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+    
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 257ms (Views: 252.9ms | ActiveRecord: 4.1ms | Allocations: 206107)
+
+
+Started GET "/api/v1/restaurants/2858" for ::1 at 2021-11-11 14:48:56 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+    
+Processing by RestaurantsController#show as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 109)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (809: unexpected token at ''):
+  
+app/controllers/restaurants_controller.rb:19:in `find_restaurant'
+Started GET "/api/v1/restaurant/2858" for ::1 at 2021-11-11 14:49:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/restaurant/2858"):
+  
+Error occurred while parsing request parameters.
+Contents:
+
+    
+Started GET "/api/v1/restaurants/2858" for ::1 at 2021-11-11 14:49:33 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+    
+Processing by RestaurantsController#show as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 109)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (809: unexpected token at ''):
+  
+app/controllers/restaurants_controller.rb:19:in `find_restaurant'
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 14:54:57 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 6.0ms | ActiveRecord: 7.1ms | Allocations: 4424)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 14:55:02 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 15:40:27 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 4.3ms | ActiveRecord: 5.7ms | Allocations: 4444)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 15:40:29 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 299ms (Views: 294.3ms | ActiveRecord: 4.1ms | Allocations: 206103)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 16:01:41 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 45ms (Views: 10.5ms | ActiveRecord: 18.1ms | Allocations: 4426)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 16:57:28 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 7.3ms | ActiveRecord: 10.2ms | Allocations: 4425)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 16:59:17 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 6.4ms | ActiveRecord: 2.6ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 17:00:45 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 1.6ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 17:00:45 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (3.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 3.8ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 17:02:35 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (2.8ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 3.4ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 17:03:14 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (3.0ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 3.3ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 17:03:36 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.1ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 5.0ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 17:04:11 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 4.8ms | ActiveRecord: 1.7ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 17:05:03 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.0ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 1.3ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 17:05:17 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 6.2ms | ActiveRecord: 0.8ms | Allocations: 2461)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 17:06:03 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (2.7ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 3.6ms | ActiveRecord: 2.9ms | Allocations: 2461)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-11 17:06:56 +0100
+Processing by CollectionsController#create as JSON
+  Parameters: {"vegetarian_favorites"=>"domino pizza", "meat_lovers"=>"red bull joint", "user_id"=>"", "collection"=>{"vegetarian_favorites"=>"domino pizza", "meat_lovers"=>"red bull joint", "user_id"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :collection[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mCollection Create (0.8ms)[0m  [1m[32mINSERT INTO "collections" ("vegetarian_favorites", "meat_lovers", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vegetarian_favorites", "domino pizza"], ["meat_lovers", "red bull joint"], ["user_id", 6], ["created_at", "2021-11-11 16:06:56.532616"], ["updated_at", "2021-11-11 16:06:56.532616"]]
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+Completed 201 Created in 18ms (Views: 0.6ms | ActiveRecord: 6.7ms | Allocations: 3392)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 17:06:56 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (3.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 3.5ms | Allocations: 2560)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:07:17 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 361ms (Views: 355.5ms | ActiveRecord: 4.7ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:08:14 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 397ms (Views: 392.2ms | ActiveRecord: 4.3ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:08:41 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 403ms (Views: 398.6ms | ActiveRecord: 4.0ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:10:19 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 372ms (Views: 368.7ms | ActiveRecord: 3.0ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:11:05 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 596ms (Views: 590.9ms | ActiveRecord: 4.2ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:11:29 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (7.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 340ms (Views: 332.9ms | ActiveRecord: 7.1ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:11:45 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 373ms (Views: 368.3ms | ActiveRecord: 4.4ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:11:57 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (6.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 402ms (Views: 395.2ms | ActiveRecord: 6.3ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:13:28 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 346ms (Views: 342.2ms | ActiveRecord: 3.1ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:15:03 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (7.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 462ms (Views: 454.4ms | ActiveRecord: 7.1ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:15:50 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 464ms (Views: 459.3ms | ActiveRecord: 3.7ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:16:08 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 557ms (Views: 552.6ms | ActiveRecord: 4.3ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:16:32 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 373ms (Views: 368.7ms | ActiveRecord: 3.2ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:17:19 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 452ms (Views: 447.4ms | ActiveRecord: 4.2ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:17:50 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (6.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 397ms (Views: 390.6ms | ActiveRecord: 6.0ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:17:57 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (7.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 487ms (Views: 479.2ms | ActiveRecord: 7.6ms | Allocations: 206100)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:23:32 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 477ms (Views: 476.8ms | ActiveRecord: 10.8ms | Allocations: 208072)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:49:26 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (5.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 609ms (Views: 608.1ms | ActiveRecord: 13.7ms | Allocations: 208053)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:50:42 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (6.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 371ms (Views: 363.9ms | ActiveRecord: 6.7ms | Allocations: 206103)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 17:59:55 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 398ms (Views: 397.5ms | ActiveRecord: 11.4ms | Allocations: 208074)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 18:00:33 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 386ms (Views: 382.0ms | ActiveRecord: 4.0ms | Allocations: 206103)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 18:02:14 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (5.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 441ms (Views: 435.9ms | ActiveRecord: 5.0ms | Allocations: 206101)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 18:08:06 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 356ms (Views: 355.5ms | ActiveRecord: 9.8ms | Allocations: 208071)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 18:09:37 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.5ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 5.9ms | ActiveRecord: 4.2ms | Allocations: 2591)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 18:12:08 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 389ms (Views: 384.1ms | ActiveRecord: 4.6ms | Allocations: 206101)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 18:12:33 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (3.4ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 14.0ms | ActiveRecord: 4.0ms | Allocations: 2560)
+
+
+Started POST "/api/v1/collections" for ::1 at 2021-11-11 18:13:05 +0100
+Processing by CollectionsController#create as JSON
+  Parameters: {"vegetarian_favorites"=>"leaf soup", "meat_lovers"=>"ukwobi", "user_id"=>"", "collection"=>{"vegetarian_favorites"=>"leaf soup", "meat_lovers"=>"ukwobi", "user_id"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :collection[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mCollection Create (1.0ms)[0m  [1m[32mINSERT INTO "collections" ("vegetarian_favorites", "meat_lovers", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vegetarian_favorites", "leaf soup"], ["meat_lovers", "ukwobi"], ["user_id", 6], ["created_at", "2021-11-11 17:13:05.997661"], ["updated_at", "2021-11-11 17:13:05.997661"]]
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/collections_controller.rb:18:in `create'
+Completed 201 Created in 76ms (Views: 7.2ms | ActiveRecord: 4.4ms | Allocations: 3391)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 18:13:06 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (1.2ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 64ms (Views: 32.2ms | ActiveRecord: 1.6ms | Allocations: 2659)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 18:13:31 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 7.1ms | ActiveRecord: 0.6ms | Allocations: 2659)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 18:13:40 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.6ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 1.0ms | Allocations: 2659)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 19:09:33 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 388ms (Views: 387.7ms | ActiveRecord: 10.4ms | Allocations: 208071)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 20:01:28 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (3.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 344ms (Views: 315.6ms | ActiveRecord: 6.7ms | Allocations: 221212)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 20:06:43 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (4.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 421ms (Views: 407.7ms | ActiveRecord: 8.7ms | Allocations: 210037)
+
+
+Started GET "/api/v1/collections" for ::1 at 2021-11-11 20:06:49 +0100
+Processing by CollectionsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCollection Load (0.3ms)[0m  [1m[34mSELECT "collections".* FROM "collections" WHERE "collections"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/collections_controller.rb:8:in `index'
+Completed 200 OK in 50ms (Views: 15.8ms | ActiveRecord: 9.4ms | Allocations: 13359)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-11-11 20:08:44 +0100
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"lokoja", "email"=>"loko@gmail.com", "password"=>"[FILTERED]", "user"=>{"username"=>"lokoja", "email"=>"loko@gmail.com"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "lokoja"], ["email", "loko@gmail.com"], ["password_digest", "$2a$12$bgOyqaFLX/kwgkX21uWIzOUgh3VxcQBXFWyVS7OmGhKH7CQHmOrVO"], ["created_at", "2021-11-11 19:08:44.941756"], ["updated_at", "2021-11-11 19:08:44.941756"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 314ms (Views: 0.5ms | ActiveRecord: 3.2ms | Allocations: 2846)
+
+
+Started GET "/api/v1/restaurants" for ::1 at 2021-11-11 20:08:45 +0100
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (6.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/controllers/restaurants_controller.rb:5:in `index'
+Completed 200 OK in 332ms (Views: 324.5ms | ActiveRecord: 6.8ms | Allocations: 206102)
+
+
