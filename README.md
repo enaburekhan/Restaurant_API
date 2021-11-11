@@ -1,4 +1,4 @@
-# doctors-appointment-api
+# restaurants-api
 The restaiurant_api allows us to fetch restaurants data to the frontend. Built with ruby_on_rails. This repo host the backend. To access the react-redux frontend, go to [restaurants-app](https://github.com/enaburekhan/restaurant-app.git)
 
 ## Built With
@@ -19,7 +19,7 @@ The restaiurant_api allows us to fetch restaurants data to the frontend. Built w
 
 ## API endpoint 
 
-[Restaurants-API]()
+[restaurants-API]()
 
 ## Getting Started
 
