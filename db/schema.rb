@@ -10,17 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_09_144401) do
+ActiveRecord::Schema.define(version: 2021_11_12_210149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "collections", force: :cascade do |t|
-    t.string "vegetarian_favorites"
-    t.string "meat_lovers"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "restaurant_type"
     t.index ["user_id"], name: "index_collections_on_user_id"
   end
 
