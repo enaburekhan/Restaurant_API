@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(username: 'test_user', email: 'testuser@gmail.com', password: 'testuser')
+
+Restaurant.csv_import
