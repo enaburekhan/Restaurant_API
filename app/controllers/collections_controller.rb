@@ -43,6 +43,6 @@ class CollectionsController < ApplicationController
   end
 
   def collection_params
-    params.permit(:vegetarian_favorites, :meat_lovers, :user_id)
+    params.permit(:restaurant_type, :user_id)
   end
 end
