@@ -1,6 +1,5 @@
 class Restaurant < ApplicationRecord
   require 'csv'
-  
 
   has_many :favorite_restaurants
   has_many :collections, through: :favorite_restaurants
