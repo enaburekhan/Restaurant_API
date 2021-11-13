@@ -19,7 +19,7 @@ The restaiurant_api allows us to fetch restaurants data to the frontend. Built w
 
 ## API endpoint 
 
-[restaurants-API](https://pacific-bastion-14031.herokuapp.com/)
+[restaurants-API]()
 
 ## Getting Started
 
